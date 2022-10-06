@@ -7,8 +7,12 @@
 int main(void){
     message_t* msg;
     msg = new_message();
-    printf("This is the msg piinter: %p\n", msg);
-    printf("This is the value in msg pointer: %d\n", msg->len);
+    printf("This is the msg pointer: %p\n", msg);
+    msg->len = 12;
+    printf("This is the length value in msg pointer: %d\n", msg->len);
 
     delete_message(msg);
+
+    printf("This is the  length value in msg pointer: %d\n", msg->len);
+
 }

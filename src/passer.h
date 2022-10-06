@@ -5,6 +5,8 @@
 //Including necessary headers
 #include <stdint.h>
 #include <stddef.h>
+#include <stdbool.h>
+
 
 //Message type Declaration
 typedef struct {
