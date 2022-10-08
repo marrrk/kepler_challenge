@@ -1,6 +1,6 @@
 # tool macros
 CC ?= gcc
-CFLAGS := -Wall
+CFLAGS := -Wall -lpthread
 DBGFLAGS := -g
 COBJFLAGS := $(CFLAGS) -c
 
