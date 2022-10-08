@@ -61,7 +61,7 @@ int send(uint8_t destination_id, message_t* msg);
  * @param msg 
  * @return int 
  */
-int recv(uint8_t receiver_id, message_t* msg);
+int recv(uint8_t receiver_id, message_t** msg);
 
 
 

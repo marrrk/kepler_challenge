@@ -48,7 +48,7 @@ void *myThreadFun2(void *vargp) {
     message_t* msg = 0;
     sleep(2);
     
-    if (recv(id, msg) == 0) {
+    if (recv(id, &msg) == 0) {
         printf("Received message Successfully!\n");
         //printf("The message received is: %d\n", msg->len);
     } else {
@@ -91,9 +91,9 @@ int main(void){
     printf("Message at message_library[1] is: %d\n", msg_library[1].msg.data[1]);
 
     message_t* msg;
-    if (recv(3, msg) == 0) {
+    if (recv(3, &msg) == 0) {
         printf("Received message Successfully! Pointer is at %p\n", msg);
-        //printf("The message received length is: %d\n", msg->len);
+        printf("The message received length is: %d\n", msg->len);
     }
 
     

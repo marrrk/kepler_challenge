@@ -53,14 +53,14 @@ int send(uint8_t destination_id, message_t* msg){
 
 //msg is passed by value, meaning a copy of the variable is created in this function specifically.
 // need to find a way to pass it by reference :)
-int recv(uint8_t receiver_id, message_t* msg){  
+int recv(uint8_t receiver_id, message_t** msg){  
     bool success = false;
     for (int i =0 ; i < LIBRARY_SIZE; i++){
         // Searching if any messages are assigned to receiver_id
         if (msg_library[i].receiver == receiver_id){
             printf("msg pointer currently pointing at: %p\n", msg);
             printf("Message to receive pointer: %p\n", &msg_library[i].msg);
-            msg = &msg_library[i].msg; //telling the receiver the message
+            *msg = &msg_library[i].msg; //telling the receiver the message
             printf("msg pointer currently pointing at: %p\n", msg);
             success = true;
             return 0;
