@@ -75,7 +75,7 @@ int main(void){
 
 
     /******** TESTING THE CREATE AND DELETE MESSAGE FUNCTIONS SEQUENTIALLY *************/
-    printf("\nStarting with basic bequential test to create and delete a message\n");
+    printf("\nStarting with basic sequential test to create and delete a message\n");
 
     message_t* msg;
     printf("\nCalling new_message()\n");
@@ -129,16 +129,6 @@ int main(void){
     printf("\n");    printf("\n\n");
     /****************************************************************************************/
 
-    //printf("Message at message_library[1] is: %d\n", msg_library[1].msg.data[1]);
-    /**
-    message_t* msg;
-    if (recv(3, &msg) == 0) {
-        printf("Received message Successfully! Pointer is at %p\n", msg);
-        printf("The message received length is: %d\n", msg->len);
-        printf("The message received data is: %d\n", msg->data[1]);
-
-    }
-    **/
     
     printf("*******************************************************");
     printf("*****************Final Message Library*****************");
